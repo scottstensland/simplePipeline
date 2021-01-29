@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo
-echo "of course its 42"
+echo "of course the answer is 42"
 echo
 

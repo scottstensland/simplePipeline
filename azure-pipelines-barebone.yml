@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'f6574427-40e1-433e-8d97-dd5ef391af9a'
-  imageRepository: 'sekhemrebarebone'
+  imageRepository: 'stensimageRepository'
   containerRegistry: 'stenscontainerregistrycairo.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/barebone/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -21,7 +21,7 @@ variables:
 
 stages:
 - stage: Build
-  displayName: Build and push stage bare bones
+  displayName: Build and push stage bare bones stens
   jobs:  
   - job: Build
     displayName: Build
@@ -29,7 +29,7 @@ stages:
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
-      displayName: Build and push an image to container registry bare bone
+      displayName: Build and push an image to container registry bare bone stens
       inputs:
         command: buildAndPush
         repository: $(imageRepository)
